@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手机发布系统</title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div class="box">
+    <div class="left"><img src="images/left.png" alt=""/></div>
+    <div class="right"><img src="images/right.png" alt=""/></div>
+    <div class="con">
+        <div class="app-con">
+            <div>
+                <div class="images">
+                    <div class="logo2"><img src="images/logo.png" alt=""/></div>
+                </div>
+                <div class="name">科技果园 设备为: <span id="work" class="name"></span></div>
+
+                <div class="Split-line"></div>
+                <div class="txt-two">
+                    <div>0.1 (Build 0.1.1602151830) - 8.14 MB</div>
+                    <div>更新于:2016-02-15 18:33</div>
+                    <button><a href="#">下载安装</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var browser = {
+        versions: function () {
+            var u = navigator.userAgent;
+            return {
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+                Windows: u.indexOf('Windows') > -1, //是否为Windows
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            };
+        }()
+    };
+    var work = document.getElementById('work');
+    if (browser.versions.Windows) work.innerHTML = "Windows";
+    else if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) work.innerHTML = "ios ";
+    else if (browser.versions.android) work.innerHTML = "android ";
+
+    //    document.writeln(" 是否为移动终端: "+browser.versions.mobile+"<br/>");
+    //    document.writeln(" ios终端: "+browser.versions.ios+"<br/>");
+    //    document.writeln(" android终端: "+browser.versions.android+"<br/>");
+    //    document.writeln(" 是否为iPhone: "+browser.versions.iPhone+"<br/>");
+    //    document.writeln(" 是否iPad: "+browser.versions.iPad+"<br/>");
+    document.writeln(navigator.userAgent + "<br/>");
+    //    window.onload=function (){
+    //        var agent = navigator.userAgent.toLowerCase();
+    //        console.log(agent);
+    //        var res = agent.match(/android/);
+    //        if(res == "android")
+    //            return res;
+    //        res = agent.match(/iphone/);
+    //        if(res == "iphone")
+    //            return "ios";
+    //        res = agent.match(/ipad/);
+    //        if(res == "ipad")
+    //            return "ios";
+    //        res = agent.match(/windows/);
+    //        if(res == "windows")
+    //            return "wp";
+    //        return "pc";
+    //    }
+</script>
+</body>
+</html>

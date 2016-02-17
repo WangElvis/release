@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #A9B1B3;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+.box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.left {
+    position: relative;
+    width: 15%;
+    float: left;
+}
+
+.right {
+    position: relative;
+    width: 15%;
+    float: right;
+}
+
+.con {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+
+.app-con {
+    padding-top: 11%;
+    text-align: center;
+}
+
+.images {
+    position: relative;
+    width: 22%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.images:hover .QR-code {
+    transform: scale(1.6);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+    background-color: #EFF2F2;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+}
+
+.logo {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 48%;
+    border-radius: 17.54%;
+    background-color: #fff;
+}
+
+.logo2 {
+    position: relative;
+    margin: 0 auto;
+    padding: 10px;
+    width: 48%;
+    border-radius: 17.54%;
+    background-color: #fff;
+}
+
+.QR-code {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    width: 48%;
+    border: 20px solid transparent;
+    border-radius: 26px;
+}
+
+.name {
+    position: relative;
+    margin: 50px auto 20px;
+    color: #505556;
+    text-align: center;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.txt-one {
+    margin: 0 auto;
+    width: 23%;
+    text-align: left;
+    white-space: nowrap;
+    line-height: 22px;
+}
+
+.Split-line:before {
+
+}
+
+.txt-two {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+
+.txt-two:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    margin-left: -30%;
+    width: 60%;
+    border-top: 1px solid #DAE2E3;
+    content: ' ';
+}
+
+.txt-two button {
+    margin: 30px auto 0;
+    display: inline-block;
+    padding: 12px 46px;
+    min-width: 23%;
+    border: 1px solid #A9B1B3;
+    border-radius: 40px;
+    color: #868C8E;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.txt-two button a {
+    text-decoration: none;
+}
